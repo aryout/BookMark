@@ -47,15 +47,11 @@
 1. [ABA问题我们可以使用JDK的并发包中的AtomicStampedReference和 AtomicMarkableReference来解决](https://www.cnblogs.com/exceptioneye/p/5373498.html)
 ```
 // 用int做时间戳
-
 AtomicStampedReference<QNode> tail = new AtomicStampedReference<CompositeLock.QNode>(null, 0);
-
 int[] currentStamp = new int[1];
 
 // currentStamp中返回了时间戳信息
-
 QNode tailNode = tail.get(currentStamp);
-
 tail.compareAndSet(tailNode, null, currentStamp[0], currentStamp[0] + 1)
 ```
 2. AtomicStampedReference的源代码是如何实现的<br>
@@ -81,8 +77,11 @@ tail.compareAndSet(tailNode, null, currentStamp[0], currentStamp[0] + 1)
 4. DefaultListableBeanFactory.java<br>
   注册bean，registerBeanDefinition，添加到beanDefinitionMap中
 #### Bean获取过程
-1. AbstractBeanFactory<br>
+![bean](https://github.com/aryout/BookMark/blob/master/img/bean.png)
+1. bean主要通过BeanFactory和ApplicationContext获取<br>
+  这里ApplicationContext实际上是继承自BeanFactory的，两者的区别在于BeanFactory对bean的初始化主要是延迟初始化的方式，而ApplicationContext对bean的初始化是在容器启动时即将所有bean初始化完毕<br>
+2. AbstractBeanFactory<br>
   final RootBeanDefinition mbd = getMergedLocalBeanDefinition(beanName);<br>
   return getMergedBeanDefinition(beanName, getBeanDefinition(beanName));
-2. DefaultListableBeanFactory<br>
+3. DefaultListableBeanFactory<br>
   BeanDefinition bd = this.beanDefinitionMap.get(beanName);
