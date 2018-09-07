@@ -1,0 +1,18 @@
+#### Electron是Node.js和Chromium Web浏览器的混合体
+
+支持跨平台桌面应用程序开发。一些非常流行的应用程序，如VisualStudioCode、Atom、GitKraken和Postman都是用它编写的，它们的性能都非常好。
+
+Java作为桌面应用程序平台并没有因为JavaScriptRIA而消亡，它的死亡主要是由于SUN公司对客户端技术的忽视，Sun专注于要求快速服务器端性能的企业客户
+
+
+真正扼杀applet的是几年前在Java插件和JavaWebStart中发现的一个糟糕的安全漏洞，该bug导致全球范围内的警报停止使用Javaapplet和Webstart应用程序。
+
+还可以开发其他类型的Java桌面应用程序，因此NetBeans和EclipseIDE之间的竞争依然存在，但是在Java这一领域的工作是停滞不前的，在开发工具之外，很少有基于Java的应用程序。
+
+10年前，JavaFX将成为Sun对iPhone的回应。它将支持在手机中可用的Java平台上开发图形用户界面丰富的应用程序，并试图单枪匹马地将Flash和IOS应用程序开发排除在外，但这没有变成现实，JavaFX仍在使用，但没有达到它的炒作效果。
+
+#### 丰富的因特网应用程序(rich-Internet-application，RIA）
+十年前，软件业在用加速JavaScript引擎来实现富互联网应用程序，这些引擎会使桌面应用程序变得不再重要。
+
+这个故事实际上始于二十多年前，Sun和Netscape就Netscape
+Navigator中的Java小程序达成了一项协议，JavaScript语言部分是作为Javaapplet的脚本语言开发的，希望服务器端有JavaServlet，客户端有Javaapplet，这给了我们在这两种环境上都有相同编程语言的条件。这种情况因为各种原因而并没有发生。
